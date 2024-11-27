@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'; // Imports React library to use JSX and React features like components.
 import axios from 'axios';
 import SearchBar from './components/SearchBar';
 import BookList from './components/BookList';
@@ -16,9 +16,10 @@ const App = () => {
       setBooks(response.data.items || []);
     } catch (error) {
       console.error('Error fetching data:', error);
+      alert("Failed to fetch books. Please try again.");
     }
   };
-
+ 
   return (
     <div className="bg-teal-50 min-h-screen p-4">
       <header className="flex flex-col items-center">

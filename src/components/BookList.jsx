@@ -1,8 +1,9 @@
 import React from 'react';
 
-const BookList = ({ books }) => {
+const BookList = ({ books }) => { 
+
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 gap-4 mt-8">
       {books.length === 0 ? (
         <p className="col-span-full text-center text-gray-500">
            Looking for inspiration? Use the search bar to discover books from various genres.
@@ -24,7 +25,7 @@ const BookList = ({ books }) => {
               />
             </div>
             <h3 className="font-bold mt-2 text-sm">{book.volumeInfo.title}</h3>
-            <p className="text-gray-600 text-xs">
+            <p class Name="text-gray-600 text-xs">
               {book.volumeInfo.authors?.join(', ') || 'Unknown Author'}
             </p>
           </div>
